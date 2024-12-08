@@ -36,10 +36,23 @@
             animation: fadeIn 2s ease-out forwards;
         }
 
+        /* Contenedor del logo y las imágenes de Discord y Minecraft */
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
         .logo {
             width: 200px;
-            margin-bottom: 20px;
-            animation: fadeInUp 1s ease-out forwards;
+            margin: 0 20px; /* Espaciado entre las imágenes */
+        }
+
+        .discord, .minecraft {
+            width: 50px;
+            opacity: 0;
+            animation: fadeIn 1.5s ease-out forwards;
         }
 
         .grid {
@@ -71,13 +84,6 @@
         .grid-item:hover {
             background: rgba(0, 0, 0, 0.9);
             transform: scale(1.05);
-        }
-
-        .discord {
-            width: 50px;
-            margin: 20px;
-            opacity: 0;
-            animation: fadeIn 1.5s ease-out forwards;
         }
 
         .ip {
@@ -133,16 +139,24 @@
 
     <!-- Contenido principal -->
     <div class="content">
-        <img class="logo" src="https://cdn.discordapp.com/icons/1240765944398217236/f491f514845b6ca7fa6e5ad42b7528e1.png?size=2048" alt="Logo">
+        <div class="logo-container">
+            <!-- Imagen Discord a la izquierda del logo -->
+            <a href="https://discord.gg/" target="_blank">
+                <img class="discord" src="https://i.pinimg.com/originals/cf/64/fc/cf64fcce5cc8296544516488631ad676.png" alt="Discord">
+            </a>
+            <!-- Logo principal -->
+            <img class="logo" src="https://cdn.discordapp.com/icons/1240765944398217236/f491f514845b6ca7fa6e5ad42b7528e1.png?size=2048" alt="Logo">
+            <!-- Imagen Minecraft a la derecha del logo -->
+            <img class="minecraft" src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3209992/minecraft-icon-md.png" alt="Minecraft">
+        </div>
+
         <div class="grid">
             <div class="grid-item">Miembros del staff</div>
             <div class="grid-item">Wiki</div>
             <div class="grid-item">Foro</div>
             <div class="grid-item">Tienda</div>
         </div>
-        <a href="https://discord.gg/" target="_blank">
-            <img class="discord" src="https://i.pinimg.com/originals/cf/64/fc/cf64fcce5cc8296544516488631ad676.png" alt="Discord">
-        </a>
+
         <div class="ip">
             <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3209992/minecraft-icon-md.png" alt="Minecraft">
             <span>play.boxpvp.com</span>
@@ -150,3 +164,4 @@
     </div>
 </body>
 </html>
+
