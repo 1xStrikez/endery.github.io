@@ -15,48 +15,52 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 /* Contenedor central */
 .content {
-    text-align: center;
     color: white;
 }
 
-/* Estilo del logo */
+/* Logo */
 .logo-container .logo {
     width: 150px;
     height: auto;
     margin-bottom: 20px;
 }
 
-/* Estilo de los enlaces */
-.links a {
+/* Enlaces */
+.link-button {
     display: inline-block;
-    font-size: 18px;
-    margin: 10px 0;
+    padding: 10px 20px;
+    margin: 15px;
+    font-size: 20px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
     text-decoration: none;
-    color: #9146ff;
-}
-
-.copy-link {
+    border-radius: 10px;
+    transition: 0.3s;
     font-weight: bold;
+    text-align: center;
 }
 
-.discord-link {
-    font-size: 16px;
+.link-button:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    transform: scale(1.05);
 }
 
-.discord-icon {
-    width: 24px;
+.enderpearl-icon, .discord-icon {
+    width: 30px;
     vertical-align: middle;
     margin-right: 10px;
 }
 
-/* Hover effect */
-.links a:hover {
-    color: #ff5c8d;
-    transform: scale(1.1);
-    transition: 0.3s;
+/* Enlace Discord */
+.discord {
+    background-color: #7289da;
 }
 
+.discord:hover {
+    background-color: #5f73a1;
+}
