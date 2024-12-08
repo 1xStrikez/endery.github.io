@@ -46,18 +46,26 @@
             transform: scale(1.2);
         }
 
-        /* IP and Discord Boxes */
+        /* Styled Boxes (IP & Discord) */
         .box {
             display: flex;
             align-items: center;
             justify-content: center;
             flex-direction: column;
-            background-color: rgba(0, 0, 0, 0.6);
-            padding: 15px;
+            background-color: rgba(0, 0, 0, 0.8);
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+            padding: 20px;
             border-radius: 10px;
+            transition: all 0.3s ease;
+            width: 250px;
             text-align: center;
-            transition: box-shadow 0.3s ease;
-            width: 200px;
+        }
+
+        .box:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 20px rgba(0, 255, 0, 0.5);
+            border-color: rgba(0, 255, 0, 0.6);
         }
 
         .box img {
@@ -123,8 +131,8 @@
         <div class="staff">
             <div class="member">
                 <img src="https://minotar.net/avatar/xStrikez_" alt="xStrikez_">
-                <p>xStrikez_</p>
-                <p class="role">Owner</p>
+                <p>xStrikez</p>
+                <p class="role">Dueño</p>
             </div>
         </div>
     </div>
