@@ -8,7 +8,7 @@
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: linear-gradient(120deg, #1e90ff, #ff6347);
+            background: black url('https://cdn.discordapp.com/attachments/1314033252079505510/1315144831269470239/P6xFEfQ1HZ9AAAAAElFTkSuQmCC.png') repeat;
             color: white;
             display: flex;
             flex-direction: column;
@@ -18,19 +18,19 @@
             overflow: hidden;
         }
 
-        h1 {
-            animation: fadeInDown 1.5s ease;
+        .logo {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            margin-bottom: 20px;
+            background: url('https://cdn.discordapp.com/icons/1240765944398217236/f491f514845b6ca7fa6e5ad42b7528e1.png?size=2048') no-repeat center center;
+            background-size: cover;
         }
 
-        @keyframes fadeInDown {
-            from {
-                opacity: 0;
-                transform: translateY(-50px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
+        h1 {
+            font-size: 2.5em;
+            margin: 0 0 20px 0;
+            animation: fadeInDown 1.5s ease;
         }
 
         .btn {
@@ -49,22 +49,55 @@
             background: #ff4500;
         }
 
-        .link {
-            color: #1e90ff;
-            text-decoration: none;
-            font-size: 16px;
+        .icons {
+            display: flex;
+            gap: 20px;
+            margin-top: 20px;
         }
 
-        .link:hover {
-            text-decoration: underline;
+        .icon {
+            width: 50px;
+            height: 50px;
+            background-size: cover;
+            cursor: pointer;
+        }
+
+        .icon.discord {
+            background: url('https://cdn.discordapp.com/attachments/1314033252079505510/1315145161512325191/discord-7509681_1280.png') no-repeat center center;
+        }
+
+        .icon.minecraft {
+            background: url('https://prodigits.co.uk/thumbs/wallpapers/p2ls/games/26/bef7db5612438838.jpg') no-repeat center center;
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #copyMessage {
+            display: none;
+            font-size: 14px;
+            color: #90ee90;
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
+    <div class="logo"></div>
     <h1>Bienvenido a BoxPVP</h1>
     <button class="btn" onclick="copyIP()">Copiar IP</button>
-    <p id="copyMessage" style="display: none;">¡IP copiada!</p>
-    <a href="https://tu-tienda.com" class="link" target="_blank">Visita nuestra tienda</a>
+    <p id="copyMessage">¡IP copiada al portapapeles!</p>
+    <div class="icons">
+        <div class="icon discord" onclick="window.open('https://discord.gg/tu-invitacion', '_blank')"></div>
+        <div class="icon minecraft" onclick="window.open('https://tu-servidor-minecraft.com', '_blank')"></div>
+    </div>
 
     <script>
         function copyIP() {
@@ -78,3 +111,4 @@
     </script>
 </body>
 </html>
+
