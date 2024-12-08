@@ -3,165 +3,43 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BoxPvP</title>
-    <style>
-        body, html {
-            margin: 0;
-            padding: 0;
-            height: 100%;
-            font-family: Arial, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            background: black;
-            overflow: hidden;
-        }
-
-        .background {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: url('https://i.pinimg.com/originals/18/80/dd/1880dd84a6378ac2a249ddb4ea88663b.gif') no-repeat center center fixed;
-            background-size: cover;
-            filter: blur(8px); /* Blur solo para el fondo */
-            z-index: -1; /* Asegura que el fondo esté detrás del contenido */
-        }
-
-        .content {
-            position: relative;
-            text-align: center;
-            color: white;
-            animation: fadeIn 2s ease-out forwards;
-        }
-
-        /* Contenedor del logo y las imágenes de Discord y Minecraft */
-        .logo-container {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
-        }
-
-        .logo {
-            width: 200px;
-            margin: 0 20px; /* Espaciado entre las imágenes */
-        }
-
-        .discord, .minecraft {
-            width: 50px;
-            opacity: 0;
-            animation: fadeIn 1.5s ease-out forwards;
-        }
-
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 20px;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .grid-item {
-            background: rgba(0, 0, 0, 0.7);
-            padding: 20px;
-            border-radius: 10px;
-            font-size: 18px;
-            font-weight: bold;
-            color: white;
-            transition: 0.3s;
-            transform: translateY(20px);
-            opacity: 0;
-            animation: fadeInUp 1s ease-out forwards;
-        }
-
-        .grid-item:nth-child(1) { animation-delay: 0.5s; }
-        .grid-item:nth-child(2) { animation-delay: 0.7s; }
-        .grid-item:nth-child(3) { animation-delay: 0.9s; }
-        .grid-item:nth-child(4) { animation-delay: 1.1s; }
-
-        .grid-item:hover {
-            background: rgba(0, 0, 0, 0.9);
-            transform: scale(1.05);
-        }
-
-        .ip {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            margin-top: 20px;
-            font-size: 20px;
-            background: rgba(0, 0, 0, 0.6);
-            padding: 10px 20px;
-            border-radius: 10px;
-            transform: translateY(20px);
-            opacity: 0;
-            animation: fadeInUp 1s ease-out forwards;
-            animation-delay: 1.3s;
-        }
-
-        .ip img {
-            width: 30px;
-        }
-
-        .ip span {
-            color: #00ff00;
-            font-weight: bold;
-        }
-
-        /* Keyframes for animations */
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-            }
-            to {
-                opacity: 1;
-            }
-        }
-
-        @keyframes fadeInUp {
-            from {
-                opacity: 0;
-                transform: translateY(20px);
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
+    <title>MineNight</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Fondo desenfocado -->
-    <div class="background"></div>
-
-    <!-- Contenido principal -->
-    <div class="content">
-        <div class="logo-container">
-            <!-- Imagen Discord a la izquierda del logo -->
-            <a href="https://discord.gg/" target="_blank">
-                <img class="discord" src="https://i.pinimg.com/originals/cf/64/fc/cf64fcce5cc8296544516488631ad676.png" alt="Discord">
-            </a>
-            <!-- Logo principal -->
-            <img class="logo" src="https://cdn.discordapp.com/icons/1240765944398217236/f491f514845b6ca7fa6e5ad42b7528e1.png?size=2048" alt="Logo">
-            <!-- Imagen Minecraft a la derecha del logo -->
-            <img class="minecraft" src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3209992/minecraft-icon-md.png" alt="Minecraft">
+    <header>
+        <div class="content-container">
+            <img src="https://cdn.discordapp.com/icons/1240765944398217236/f491f514845b6ca7fa6e5ad42b7528e1.png?size=2048" alt="MineNight Logo" class="logo">
+            <div class="server-info">
+                <div class="info-item">
+                    <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3209992/minecraft-icon-md.png" alt="IP Logo" class="icon">
+                    <div class="info-text">
+                        <p id="ip">MineNight.us</p>
+                        <p class="copy-text" onclick="copyIP()">Dame click para copiar IP</p>
+                    </div>
+                </div>
+                <div class="info-item">
+                    <img src="https://i.pinimg.com/originals/cf/64/fc/cf64fcce5cc8296544516488631ad676.png" alt="Discord Logo" class="icon">
+                    <a href="https://discord.gg/tu-link-de-discord" class="discord-link">Únete a Discord</a>
+                </div>
+            </div>
         </div>
+    </header>
+    <main>
+        <!-- Aquí pueden ir secciones adicionales si es necesario -->
+    </main>
+    <footer>
+        <p>© 2024 MineNight. Todos los derechos reservados.</p>
+    </footer>
 
-        <div class="grid">
-            <div class="grid-item">Miembros del staff</div>
-            <div class="grid-item">Wiki</div>
-            <div class="grid-item">Foro</div>
-            <div class="grid-item">Tienda</div>
-        </div>
-
-        <div class="ip">
-            <img src="https://creazilla-store.fra1.digitaloceanspaces.com/icons/3209992/minecraft-icon-md.png" alt="Minecraft">
-            <span>play.boxpvp.com</span>
+    <div id="copy-popup" class="copy-popup">
+        <div class="popup-content">
+            <p>IP copiada!</p>
+            <img src="https://cdn.discordapp.com/icons/1240765944398217236/f491f514845b6ca7fa6e5ad42b7528e1.png?size=2048" alt="Logo Gris" class="popup-logo">
         </div>
     </div>
+
+    <script src="scripts.js"></script>
 </body>
 </html>
 
