@@ -29,6 +29,29 @@
             margin-bottom: 20px;
         }
 
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .grid-item {
+            background: rgba(0, 0, 0, 0.7);
+            padding: 20px;
+            border-radius: 10px;
+            font-size: 18px;
+            font-weight: bold;
+            color: white;
+            transition: 0.3s;
+        }
+
+        .grid-item:hover {
+            background: rgba(0, 0, 0, 0.9);
+            transform: scale(1.05);
+        }
+
         .discord {
             width: 50px;
             margin: 20px;
@@ -59,8 +82,12 @@
 <body>
     <div class="content">
         <img class="logo" src="https://cdn.discordapp.com/icons/1240765944398217236/f491f514845b6ca7fa6e5ad42b7528e1.png?size=2048" alt="Logo">
-        <h1>¡Bienvenido a BoxPvP!</h1>
-        <p>Únete a nuestro servidor de Minecraft y disfruta de la mejor experiencia PvP.</p>
+        <div class="grid">
+            <div class="grid-item">Miembros del staff</div>
+            <div class="grid-item">Wiki</div>
+            <div class="grid-item">Foro</div>
+            <div class="grid-item">Tienda</div>
+        </div>
         <a href="https://discord.gg/" target="_blank">
             <img class="discord" src="https://i.pinimg.com/originals/cf/64/fc/cf64fcce5cc8296544516488631ad676.png" alt="Discord">
         </a>
