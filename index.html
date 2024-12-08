@@ -9,7 +9,7 @@
         body {
             margin: 0;
             padding: 0;
-            background-image: url('https://th.bing.com/th/id/OIP.nK90kHGdEebUG2C-y0MjCwAAAA?rs=1&pid=ImgDetMain');
+            background-image: url('https://e1.pxfuel.com/desktop-wallpaper/1010/455/desktop-wallpaper-minecraft-end-city-minecraft-the-end.jpg');
             background-size: cover;
             background-position: center;
             font-family: Arial, sans-serif;
@@ -23,18 +23,18 @@
 
         /* Centered Content */
         .content {
-            text-align: center;
             display: flex;
             flex-direction: column;
             align-items: center;
+            text-align: center;
         }
 
         .logo-container {
             display: flex;
             align-items: center;
             justify-content: center;
-            margin-bottom: 30px;
             gap: 50px;
+            margin-bottom: 40px;
         }
 
         .logo {
@@ -46,37 +46,37 @@
             transform: scale(1.2);
         }
 
-        /* Styled Boxes (IP & Discord) */
+        /* Styled Boxes */
         .box {
+            background: linear-gradient(145deg, #23272a, #2c2f33);
+            box-shadow: 5px 5px 15px #1a1d20, -5px -5px 15px #3c4147;
+            border-radius: 15px;
+            padding: 20px;
+            text-align: center;
+            width: 280px;
+            height: 120px;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
-            flex-direction: column;
-            background-color: rgba(0, 0, 0, 0.8);
-            border: 2px solid rgba(255, 255, 255, 0.2);
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-            padding: 20px;
-            border-radius: 10px;
-            transition: all 0.3s ease;
-            width: 250px;
-            text-align: center;
+            transition: all 0.3s ease-in-out;
         }
 
         .box:hover {
-            transform: scale(1.05);
-            box-shadow: 0 6px 20px rgba(0, 255, 0, 0.5);
-            border-color: rgba(0, 255, 0, 0.6);
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 255, 0, 0.6);
         }
 
         .box img {
-            width: 80px;
+            width: 50px;
             margin-bottom: 10px;
         }
 
         .box a {
             color: white;
-            text-decoration: none;
             font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
         }
 
         .box a:hover {
@@ -93,6 +93,60 @@
             color: white;
             margin-top: 30px;
         }
+
+        .staff .member {
+            margin: 10px;
+        }
+
+        .staff .member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            border: 2px solid purple;
+        }
+
+        .staff .role {
+            color: #7D3C98;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Content -->
+    <div class="content">
+        <!-- Logo and Boxes -->
+        <div class="logo-container">
+            <div class="box">
+                <img src="https://art.pixilart.com/1c020ec9c3ce31a.png" alt="IP Logo">
+                <a href="#" onclick="copyToClipboard('EnderyClub.us')">EnderyClub.us</a>
+            </div>
+            <img src="https://cdn.discordapp.com/icons/1240765944398217236/f491f514845b6ca7fa6e5ad42b7528e1.png?size=2048" alt="Logo" class="logo">
+            <div class="box">
+                <img src="https://static.vecteezy.com/system/resources/previews/006/892/625/non_2x/discord-logo-icon-editorial-free-vector.jpg" alt="Discord Logo">
+                <a href="https://discord.gg/wZ7Y3ZpkZF" target="_blank">Discord</a>
+            </div>
+        </div>
+
+        <!-- Staff Section -->
+        <div class="staff">
+            <div class="member">
+                <img src="https://minotar.net/avatar/xStrikez_" alt="xStrikez_">
+                <p>xStrikez_</p>
+                <p class="role">Owner</p>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Copy IP to clipboard
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                alert("IP copiada al portapapeles: " + text);
+            });
+        }
+    </script>
+</body>
+</html>
 
         .staff .member {
             margin: 10px;
